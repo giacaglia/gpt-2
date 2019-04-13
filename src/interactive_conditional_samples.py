@@ -13,9 +13,9 @@ def interact_model(
     seed=None,
     nsamples=1,
     batch_size=1,
-    length=None,
+    length=2,
     temperature=1,
-    top_k=0,
+    top_k=40,
 ):
     """
     Interactively run the model
@@ -30,7 +30,7 @@ def interact_model(
      distribution. Lower temperature results in less random completions. As the
      temperature approaches zero, the model will become deterministic and
      repetitive. Higher temperature results in more random completions.
-    :top_k=0 : Integer value controlling diversity. 1 means only 1 word is
+    :top_k=40 : Integer value controlling diversity. 1 means only 1 word is
      considered for each step (token), resulting in deterministic completions,
      while 40 means 40 words are considered at each step. 0 (default) is a
      special setting meaning no restrictions. 40 generally is a good value.
